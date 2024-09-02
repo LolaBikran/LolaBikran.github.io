@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>HomePage</title>
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css">
+ 
+ <style>
+/* General Styles */
+:root {
+  --bg-color: #faf8f9;
+  --text-color: #1B3F2F;
+  --accent-color: #D8CD37;
+  --font-family: "Roboto Condensed", sans-serif;
+  --cursive-font: 'Alex Brush', cursive;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+}
+
+.navbar {
+  background-color: var(--bg-color);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: var(--text-color) !important;
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: var(--cursive-font);
+}
+.nav-item.logo-container {
+    margin: 0 20px;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--accent-color) !important;
+}
+.navbar-toggler-icon {
+position: right sticky;
+ }
+
+.section {
+  margin: 50px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Apply Alex Brush font to specific elements */
+.cursive-text {
+  font-family: var(--cursive-font);
+  font-size: 2rem; /* Adjust size as needed */
+}
+
+/* Main Section */
+.main-section {
+ position: relative;
+ background-image: url('images/background-image2.png');
+ background-size: cover;
+ background-position: center;
+ padding: 100px 0;
+ color: var(--accent-color);
+ text-align: center;
+}
+
+.main-section::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(250, 248, 249, 0.1);
+
+ z-index: 1;
+}
+
+.main-section .content {
+ position: relative;
+ z-index: 2;
+}
+
+.main-section h1,
+.main-section h2,
+.main-section p {
+ margin-bottom: 40px;
+ color: #faf8f9;
+ text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+.main-section h1 {
+ font-size: 4rem;
+ font-family: var(--cursive-font);
+ margin-bottom: 30px;
+ }
+
+.main-section p {
+ font-size: 1.5rem;
+ line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+ .main-section h1 {
+ font-size: 3rem;
+ font-family: var(--cursive-font);
+ margin-bottom: 30px;
+ }
+ .main-section h2 {
+ font-size: 1.5rem;
+ margin-bottom: 50px;
+ }
+}
+.profile-picture-container {
+    position: relative;
+    width: 250px;
+    margin: 0 auto 30px;
+    border: 5px solid #D8CD37;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.profile-picture img.active {
+    opacity: 1;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: rgba(216, 205, 55, 0.7);
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    padding: 10px;
+    width: auto;
+    height: auto;
+}
+
+.nav-arrow:hover {
+    color: rgba(216, 205, 55, 1);
+}
+
+.nav-arrow-left {
+    left: 5px;
+}
+
+.nav-arrow-right {
+    right: 5px;
+}
+
+
+/* About Section */
+.about-section {
+ padding: 50px 0;
+ color: #0E2018;
+}
+
+.about-section h2 {
+ font-size: 3rem;
+ margin: 20px 0 10px;
+ font-family: var(--cursive-font);
+ font-weight: bold;
+}
+
+.about-section h3 {
+ font-size: 1.2rem;
+ margin: -40px 0 10px;
+ font-family: 'Montserrat', sans-serif;
+ font-style: italic;
+}
+
+.text-content {
+ max-width: 600px;
+ margin: 0 auto;
+ text-align: center;
+ color: #0E2018;
+ font-size: 1.2rem;
+}
+
+#about-me .ski-box {
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ text-align: center;
+ width: 100%;
+ margin: 0 auto;
+ max-width: 1000px;
+ padding: 15px;
+ background-color: #1B3F2F;
+ transition: box-shadow 0.3s ease-in-out;
+}
+
+#about-me .ski-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 10px;
+ cursor: pointer;
+ padding: 15px 20px;
+ height: 60px;
+ box-sizing: border-box;
+ background-color: #1B3F2F;
+ color: #40916C;
+ border-radius: 5px;
+ margin-bottom: 5px;
+ font-family: var(--cursive-font);
+ font-size: 1.8rem;
+}
+
+#about-me .ski-header:hover {
+ box-shadow: 0 0 10px #D8CD37;
+ background-color: #0E2018;
+ color: #40916C;
+}
+
+#about-me .ski-icon {
+ font-size: 2rem;
+ width: 24px;
+ text-align: center;
+ line-height: 1;
+ color: #d8cd37;
+}
+
+#about-me .ski-content {
+ font-size: 1.2rem;
+ font-family: "Roboto Condensed", sans-serif;
+ display: none;
+ margin-top: 10px;
+ padding: 15px;
+ color: #faf8f9;
+ line-height: 1.6;
+ overflow: hidden;
+}
+#about-me .social-icons img {
+ width: 30px; /* Width for social icon images */
+ height: auto; /* Automatic height */
+ margin: 0 10px; /* Horizontal margin */
+ filter: invert(33%) sepia(10%) saturate(1424%) hue-rotate(28deg) brightness(94%) contrast(88%);
+}
+
+/* My Approach Section */
+
+.approach-section {
+ padding: 50px 0; /* Vertical padding */
+ color: #0E2018; /* Text color */
+}
+
+.approach-section h2 {
+ font-size: 3rem; /* Font size for h2 */
+ margin-top: 20px; /* Top margin for h2 */
+ margin-bottom: 40px; /* Bottom margin for h2 */
+ font-family: var(--cursive-font);
+ font-weight: bold;
+}
+.approach-section h5 {
+ font-size: 2.8rem;
+ margin-bottom: 10px; /* Bottom margin for h2 */
+ font-family: var(--cursive-font);
+ font-weight: bold;
+ text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Text shadow for section title */
+ color: #40916C; /* Text color for h3 on small screens */
+}
+
+
+.timeline {
+ width: 100%; /* Full width */
+ background-color: #1B3F2F; /* Background color */
+ color: #faf8f9; /* Text color */
+ padding: 30px 20px; /* Padding */
+ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow */
+}
+
+.timeline ul {
+ list-style-type: none; /* No list style */
+ border-left: 2px solid #D8CD37; /* Left border */
+ padding: 10px 5px; /* Padding */
+ 
+}
+
+.timeline ul li {
+ padding: 20px 20px; /* Padding */
+ position: relative; /* Relative positioning */
+ cursor: pointer; /* Cursor style */
+ transition: 0.5s; /* Transition duration */
+}
+
+.timeline ul li span {
+ display: inline-block; /* Inline block display */
+ background-color: #D8CD37; /* Background color */
+ border-radius: 25px; /* Rounded corners */
+ padding: 2px 5px; /* Padding */
+ font-size: 1.1rem; /* Font size */
+ font-style: italic;
+ text-align: center; /* Center text alignment */
+}
+
+.timeline ul li .content h3 {
+ color: #0E2018; /* Text color for h3 */
+ font-size: 1.2rem; /* Font size for h3 */
+ padding-top: 5px; /* Top padding for h3 */
+}
+
+.timeline ul li .content p {
+ padding: 5px 0px 15px 0px; /* Padding for paragraphs */
+ font-size: 1.2rem; /* Font size for paragraphs */
+}
+
+.timeline ul li:before {
+ position: absolute; /* Absolute positioning */
+ content: ''; /* Empty content */
+ width: 10px; /* Width for pseudo-element */
+ height: 10px; /* Height for pseudo-element */
+ background-color: #0E2018; /* Background color */
+ border-radius: 50%; /* Rounded corners */
+ left: -11px; /* Left position */
+ top: 28px; /* Top position */
+ transition: 0.5s; /* Transition duration */
+}
+
+.timeline ul li:hover {
+ background-color: #0E2018; /* Background color on hover */
+}
+
+.timeline ul li:hover:before {
+ background-color: #D8CD37; /* Background color on hover for pseudo-element */
+ box-shadow: 0px 0px 10px 2px #d8cd37; /* Box shadow on hover for pseudo-element */
+}
+
+@media (max-width: 768px) {
+ .timeline {
+ padding: 30px 5px 30px 10px; /* Padding for small screens */
+ }
+
+ .timeline ul li .content h3 {
+ color: #0E2018; /* Text color for h3 on small screens */
+ font-size: 1.2rem; /* Font size for h3 on small screens */
+ }
+}
+.article-link {
+ background-color: transparent;
+ color: #0E2018;
+ border: none;
+ padding: 0;
+ font-size: 1rem;
+ font-weight: normal;
+ text-decoration: underline;
+ cursor: pointer;
+ transition: color 0.3s;
+}
+
+.article-link:hover {
+ color: #D8CD37;
+}
+
+/* For Who Section */
+#ForWho {
+ background-color: #faf8f9; /* Background color for For Who section */
+ padding: 50px 0;
+ color: #0E2018; /* Text color */
+}
+
+#ForWho h2 {
+ margin: 20px 0 40px;
+ font-family: var(--cursive-font);
+ font-weight: bold;
+ font-size: 3rem;
+}
+
+.ski-box {
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ margin: 0 10px;
+ padding: 15px;
+ background-color: #1B3F2F; /* Background color for skill box */
+ transition: box-shadow 0.3s ease-in-out;
+ text-align: center;
+ font-family: var(--cursive-font);
+ font-size: 1.8rem;
+}
+
+.ski-header {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+ cursor: pointer;
+ padding: 15px 20px;
+ height: 60px;
+ box-sizing: border-box;
+ background-color: #1B3F2F; /* Background color for skill header */
+ color: #40916C;
+ border-radius: 5px;
+ margin-bottom: 5px;
+ font-size: 1.8rem;
+}
+
+.ski-header:hover {
+ box-shadow: 0 0 10px #d8cd37; /* Box shadow on hover */
+ background-color: #0E2018;
+ color: #40916C;
+}
+
+.ski-icon {
+ font-size: 2rem;
+ width: 24px;
+ line-height: 1;
+ text-align: center;
+ color: #FFDD44; /* Text color for skill icon */
+}
+
+.skill-description {
+ font-size: 1.2rem;
+ margin: 10px 10px 100px;
+}
+
+.ski-content {
+ font-size: 1.2rem;
+ display: none;
+ margin-top: 10px;
+ padding: 15px;
+ color: #faf8f9; /* Text color for skill content */
+ line-height: 1.6;
+ overflow: hidden;
+ font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Contact Section */
+.contact-section {
+ position: relative; /* Add relative positioning */
+ background-image: url('images/background-image2.png');
+ background-size: cover; /* Cover the entire section */
+ background-position: center; /* Center the background image */
+ padding: 50px 0; /* Vertical padding */
+ margin-top: 50px;
+ color: var(--accent-color);
+ background-color: #acaf82; /* Background color */
+}
+.contact-section::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(250, 248, 249, 0.1);
+
+ z-index: 1;
+}
+
+.contact-section h2 {
+ margin-top: 20px; /* Top margin for ForWho section title */
+ margin-bottom: 40px; /* Bottom margin for ForWho section title */
+ color: #faf8f9;
+ font-size: 1.6rem;
+}
+
+
+.contact-section .social-icons {
+ margin-top: 0px; /* Top margin for social icons */
+ display: flex; /* Flex display */
+ justify-content: center; /* Center alignment */
+}
+
+.contact-section .social-icons img {
+ width: 30px; /* Width for social icon images */
+ height: auto; /* Automatic height */
+ margin: 0 10px; /* Horizontal margin */
+ filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+ </style>
+</head>
+<body>
+ <!-- Sticky Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+  <a class="navbar-brand" href="#Home">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+  <a class="nav-link" href="#about-me">About me</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="#approach">My approach</a>
+  </li>
+  <li class="nav-item">
+   <a class="nav-link" href="#ForWho">For who</a>
+   </li>
+  <li class="nav-item">
+  <a class="nav-link" href="#contact">Contact</a>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </nav>
+
+ <!-- HomePage Section -->
+ <section id="Home" class="main-section">
+  <div class="container">
+      <div class="content">
+          <h1>Hello wonderful humans! <br></h1>
+          <h2>We all seek success and meaning,<br>yet we often overlook that we're <b>human beings</b><br><i>—sensitive, complex and deserving gentleness too!—</i></h2>
+          <p>My name is Lola, and I'm way more than these pictures, just like you.</p>
+          <div class="text-center">
+              <div class="profile-picture-container">
+                  <div class="profile-picture">
+                      <img src="images/about.jpg" alt="Profile Picture 1" class="active">
+                      <img src="images/lola2.jpg" alt="Profile Picture 2">
+                      <img src="images/lola3.jpg" alt="Profile Picture 3">
+                      <img src="images/lola4.jpg" alt="Profile Picture 4">
+                      <img src="images/lola5.jpg" alt="Profile Picture 5">
+                      <img src="images/lola6.jpg" alt="Profile Picture 6">
+                      <img src="images/lola7.jpg" alt="Profile Picture 7">
+                      <img src="images/lola8.jpg" alt="Profile Picture 8">
+                      <img src="images/lola9.jpg" alt="Profile Picture 9">
+                      <img src="images/lola10.jpg" alt="Profile Picture 10">
+                  </div>
+                  <button class="nav-arrow nav-arrow-left" onclick="prevImage()">&#8249;</button>
+                  <button class="nav-arrow nav-arrow-right" onclick="nextImage()">&#8250;</button>
+              </div>
+ <h2>It's difficult to find deep peace in this crazy world, isn't it?<br>At least, you're in the right place to start!</h2>
+ <p>Self-confidence | Emotional regulation | Sensitivity | Holistic well-being | Ethical living </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- About Section -->
+ <section id="about-me" class="about-section">
+  <div class="container">
+ <h2 class="text-center mb-5">What about my story</h2>
+ </div>
+ <div class="container">
+ <div class="text-center mb-5">
+ <p>To make a long story short, I'm coming from a costal town in France, from a lower-middle social class. My early years were quite traumatizing and left me with post-traumatic stress syndrome (PTSD): low self-esteem, emotional struggles, and a need for approval. Despite this fragile foundation, I went to Paris at the age of 18 to study biology, specifically physiopathology. I went on to get a master's degree, specializing in nutrition and metabolism. My internship was on epigenetics. After that, I found my first job as research engineer in a neurorespiratory lab. I worked there for 3 years, but I wanted to have a broader vision, so I obtained a Master of Science in Biotechnologies and experienced working in a consulting firm, financing research and development projects. </p>
+ <p>Over these years and despite my education, I lived completely carelessly, prioritizing socializing and having fun. This part of my life filled me with wonderful memories. At the age of 27, I had never reflected on what I really wanted in life. Living the fast life, partying, drinking and smoking was fun at the time, but unconsciously I knew it wasn't my true nature. I felt empty, I had no vision for myself, something was clearly missing. Still easily influenced, totally emotionally driven and pressured by social expectations, I didn't know who I was. Thinking about my future became extremely stressful. I collapsed internally. My mental state was so bad. A mix of despair, mild depression and identity crisis. This time I knew, I felt deeply that I had to do something for myself.</p>
+ <p>I've always been interested in understanding how we work. So I decided to dive deeply into my own identity. Seeking answers and solutions to my condition, I came across the world of positive psychology. Focusing on solutions and positive aspects helped me so much! I started my meditation journey, learned about emotions and mindset, and challenged my beliefs and thoughts, educating myself step after step. My journey has shown me that our internal state profoundly shapes how we perceive and interact with the external world.</p>
+ <p>Almost 2 years later, the results are honestly transformative. I feel good, more stable than ever, and at peace with myself. For the first time, I've experienced personal growth, pride in my own accomplishments, and self-confidence. I genuinely want to take you on my journey, that's why I'm creating this account, to do what I can to help and inspire at least some of you.</p>
+ </div>
+ </div>
+ <div class="row justify-content-center">
+ <div class="text-center">
+ <div class="ski-box">
+ <div class="ski-header" onclick="toggleContent(this)">
+ <span>Learn More</span>
+ <span class="ski-icon">&nbsp; + &nbsp;</span>
+ </div>
+ <div class="ski-content">
+ <p>
+ <b></b><br>
+ Too often we forget that everything is interconnected and struggle to see the bigger picture. <br>For example, did you know that mental health (🧠) is deeply linked to what you eat (🍏) and your lifestyle (🏡) in general? And that your lifestyle is intimately linked to technology (💡) and society (🌍)? Every aspect of our daily lives interacts with each other. For this very reason, we'll try to bridge the gap between scientific discoveries and common knowledge as we travel across various domains:<br>
+🔬 Biology;
+<br>🧠 Psychology;
+<br>🍏 Food;
+<br>🏡 Lifestyle;
+<br>♻️ Sustainability;
+<br>💡 Technology;
+<br>🧘 Spirituality;
+<br>💭 Philosophy;
+<br>🌍 Culture & Society.
+<br><br>I'll try my best to spark your curiosity and give you real informations about holistic well-being, that will allow you to see the bigger picture. Because I'm convinced that having a broad understanding and knowledge of how we function as human beings can be liberating. Consequently, you'll be able to make better decisions to navigate into your life in a thoughtful way. Let's connect the dots together. 
+<br><br>Thanks for joining the adventure towards the meaningful life we're all craving 💚.<br><br>
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Approach Section -->
+ <section id="approach" class="approach-section">
+ <div class="container">
+ <h2 class="text-center mb-5">My approach</h2>
+ <div class="timeline">
+ <ul>
+ <li>
+ <h5 class="section-title">Escape your mental jail</h5>
+ <div class="content">
+ <p><b>What it Means:</b><br> This step speaks to freeing oneself from limiting beliefs, mental blocks, and the negative thought patterns that keep people stuck. It’s all about breaking free from the internal constraints that prevent progress.<br><br>
+  <b>Why It's Important:</b><br> Before anyone can grow or find their true self, they need to clear the mental clutter. This step sets the foundation for everything else.<br><br>
+  <b>Content Ideas:</b>
+  <br>• Explore the science of cognitive distortions and how to overcome them.
+  <br>• Techniques like mindfulness, reframing, and evidence-based strategies for shifting mindset.
+  <br>• Exercises to identify and challenge limiting beliefs.
+ </p>
+ </div>
+ </li>
+ <li>
+ <h5 class="section-title">Unlock your true nature</h5>
+ <div class="content">
+  <p><b>What it Means:</b><br>This is about self-discovery, aligning with one’s core values, and gaining clarity on who they truly are beneath societal expectations or external pressures. It’s the process of peeling back layers to reveal the authentic self.<br><br>
+    <b>Why It's Important:</b><br>Once the mental jail is escaped, people need to reconnect with their true identity to build a life that aligns with who they are at their core.<br><br>
+    <b>Content Ideas:</b>
+    <br>• Self-reflection exercises grounded in psychological theories (e.g., identity development).
+    <br>• Methods for clarifying values and uncovering passions.
+    <br>• Scientific approaches to understanding personality and behavioral tendencies.
+   </p>
+ </div>
+ <li>
+  <h5 class="section-title">Embodie your individuality</h5>
+  <div class="content">
+    <p><b>What it Means:</b><br>This step focuses on creating a resilient, empowered version of oneself. It's about taking what you’ve discovered and using it to build confidence, emotional strength, and the ability to navigate life’s challenges.<br><br>
+      <b>Why It's Important:</b><br>Self-discovery is one thing, but applying that understanding to create a stronger, more capable version of oneself is where lasting change happens.<br><br>
+      <b>Content Ideas:</b>
+      <br>• Strategies for building self-discipline and resilience (e.g., habit formation, emotional regulation techniques).
+      <br>• Actionable plans for aligning daily actions with personal values.
+      <br>• Techniques to maintain and grow this newfound strength over time.
+     </p>
+ </div>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </section> 
+  <!-- For Who Section -->
+  <section id="ForWho" class="ForWho">
+    <div class="container">
+    <h2 class="text-center mb-5">For who?</h2>
+    <div class="text-center">
+    <p class="skill-description">
+   My scientific training in biology and three years of experience working in a research lab have helped me develop a structured and thorough methodology to approach problems. As lead engineer for a COVID project, I'm accustomed to biosafety protocols and working in restrictive and highly regulated environments. Moreover, my time at Leyton gave me a solid understanding of the developmental and innovative challenges industries face before launching products to market.<br><br>
+   I genuinely believe that I maximized the potential of my career break, and I’m convinced it has given me a distinct advantage. For instance, I had been avoiding English for years, despite knowing its value for my career ambitions. Determined to overcome this mental barrier, I made learning English a top priority. I immersed myself in English content and spent over 160 hours with a tutor on the Preply platform. As a result, I am now fluent in English.<br><br>
+   During this time, I also addressed personal unresolved issues and adopted a daily meditation practice. Deep meditation yielded numerous benefits, particularly in enhancing emotional intelligence. By exploring my own emotions, I significantly improved my empathy and my ability to recognize and respond to others' emotional states. Additionally, cultivating self-awareness and adopting a growth mindset have equipped me to manage stress more effectively, sharpen my focus, and approach new experiences and ideas with an open mind.<br><br>
+   Finally, my daily engagement with various AI tools has significantly enhanced my professional toolkit. By leveraging AI for web research, idea refinement, and knowledge expansion, I’ve honed my ability to efficiently process and synthesize vast amounts of information. Additionally, using AI to code my portfolio website has deepened my understanding of human-AI collaboration, improving my technical literacy and adaptability in an increasingly AI-driven workplace.<br><br>
+   Ultimately, these experiences have not only broadened my skill set but also fostered a forward-thinking mindset, and improved my mental clarity and self-confidence, preparing me to embrace new challenges. I am eager to dedicate my work to an impactful project. In today’s fast-changing world, Keeping up and having more than one string in your bow is crucial.
+   </p>
+   <div class="row justify-content-center">
+    <div class="text-center">
+    <div class="ski-box">
+    <div class="ski-header" onclick="toggleContent(this)">
+    <span>Caution</span>
+    <span class="ski-icon">+</span>
+    </div>
+    <div class="ski-content">
+    <p>No medical advice here. Only alternative therapeutic practices because ....</p>
+    </div>
+    </div>
+    </div>
+    </section>
+
+ <!-- Contact Me Section -->
+ <section id="contact" class="contact-section">
+ <div class="container">
+ <h2 class="text-center">Self-confidence | Emotional regulation | Sensitivity | Holistic well-being | Ethical living <br><br>If you'd like to explore these topics in more depth, <br>feel free to follow me on social media</h2>
+ <div class="social-icons">
+ <a href="https://x.com/All_Is_Balanced" target="_blank">
+ <img src="icons/twitter-x.svg" alt="Icon">
+ </a>
+ </div>
+ </div>
+ </section>
+
+ <!-- Bootstrap JS and dependencies -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ <!-- Additional JavaScript for Navbar Toggle and smooth scrolling -->
+ <script>
+// Toggle content function
+function toggleContent(element) {
+ const content = element.nextElementSibling;
+ const icon = element.querySelector('.ski-icon');
+ if (content.style.display === "none" || content.style.display === "") {
+ content.style.display = "block";
+ icon.innerHTML = "&nbsp; - &nbsp;";
+ } else {
+ content.style.display = "none";
+ icon.innerHTML = "&nbsp; + &nbsp;";
+ }
+}
+// Close mobile menu when a nav link is clicked
+$(document).ready(function() {
+  $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+  });
+});
+
+// Custom smooth scrolling function
+function customSmoothScroll(event) {
+ event.preventDefault();
+ const targetId = this.getAttribute('href').substring(1);
+ const targetElement = document.getElementById(targetId);
+ const navbarHeight = document.querySelector('.navbar').offsetHeight;
+ const targetPosition = targetId === 'Home' ? 0 : targetElement.offsetTop - navbarHeight;
+
+ const startPosition = window.pageYOffset;
+ const distance = targetPosition - startPosition;
+ const duration = 1000; // Duration of the scroll in milliseconds (e.g., 1000ms = 1 second)
+ let startTime = null;
+
+ function animationScroll(currentTime) {
+ if (startTime === null) startTime = currentTime;
+ const timeElapsed = currentTime - startTime;
+ const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+ window.scrollTo(0, run);
+ if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+ }
+
+ function easeInOutQuad(t, b, c, d) {
+ t /= d / 2;
+ if (t < 1) return c / 2 * t * t + b;
+ t--;
+ return -c / 2 * (t * (t - 2) - 1) + b;
+ }
+
+ requestAnimationFrame(animationScroll);
+}
+// Navigation
+let currentImageIndex = 0;
+        const images = document.querySelectorAll('.profile-picture img');
+
+        function showImage(index) {
+            images.forEach(img => img.classList.remove('active'));
+            images[index].classList.add('active');
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+
+// Initialize custom smooth scrolling
+document.addEventListener('DOMContentLoaded', function() {
+ const links = document.querySelectorAll('a.nav-link');
+ links.forEach(link => link.addEventListener('click', customSmoothScroll));
+});
+
+ </script>
+ 
+</body>
+</html>
