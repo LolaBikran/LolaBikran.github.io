@@ -455,15 +455,15 @@ position: right sticky;
 
 /* Contact Section */
 .contact-section {
- position: relative; /* Add relative positioning */
- background-image: url('images/background-image2.png');
- background-size: cover; /* Cover the entire section */
- background-position: center; /* Center the background image */
- padding: 50px 0; /* Vertical padding */
- margin-top: 50px;
+ position: relative;
+ background-image: url('images/background-image.jpg');
+ background-size: cover;
+ background-position: center;
+ padding: 100px 0;
  color: var(--accent-color);
- background-color: #acaf82; /* Background color */
+ text-align: center;
 }
+
 .contact-section::before {
  content: "";
  position: absolute;
@@ -471,18 +471,17 @@ position: right sticky;
  left: 0;
  width: 100%;
  height: 100%;
- background-color: rgba(250, 248, 249, 0.1);
-
+ background-color:#0E20184D ;
  z-index: 1;
 }
-
-.contact-section h2 {
- margin-top: 20px; /* Top margin for ForWho section title */
- margin-bottom: 40px; /* Bottom margin for ForWho section title */
+.contact-section .content {
+ position: relative;
+ z-index: 2;
  color: #faf8f9;
- font-size: 1.6rem;
+ font-size: bold;
+ font-size: 1.5rem;
+ text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
 }
-
 
 .contact-section .social-icons {
  margin-top: 0px; /* Top margin for social icons */
@@ -530,28 +529,27 @@ position: right sticky;
  <section id="Home" class="main-section">
   <div class="container">
       <div class="content">
-          <h1>Hello wonderful humans! <br></h1>
-          <h2>We all seek success and meaning,<br>yet we often overlook that we're <b>human beings</b><br><i>—sensitive, complex and deserving gentleness too!—</i></h2>
-          <p>My name is Lola, and I'm way more than these pictures, just like you.</p>
-          <div class="text-center">
-              <div class="profile-picture-container">
-                  <div class="profile-picture">
-                      <img src="images/about.jpg" alt="Profile Picture 1" class="active">
-                      <img src="images/lola2.jpg" alt="Profile Picture 2">
-                      <img src="images/lola3.jpg" alt="Profile Picture 3">
-                      <img src="images/lola4.jpg" alt="Profile Picture 4">
-                      <img src="images/lola5.jpg" alt="Profile Picture 5">
-                      <img src="images/lola6.jpg" alt="Profile Picture 6">
-                      <img src="images/lola7.jpg" alt="Profile Picture 7">
-                      <img src="images/lola8.jpg" alt="Profile Picture 8">
-                      <img src="images/lola9.jpg" alt="Profile Picture 9">
-                      <img src="images/lola10.jpg" alt="Profile Picture 10">
-                  </div>
-                  <button class="nav-arrow nav-arrow-left" onclick="prevImage()">&#8249;</button>
-                  <button class="nav-arrow nav-arrow-right" onclick="nextImage()">&#8250;</button>
-              </div>
- <h2>It's difficult to find deep peace in this crazy world, isn't it?<br>At least, you're in the right place to start!</h2>
- <p>Self-confidence | Emotional regulation | Sensitivity | Holistic well-being | Ethical living </p>
+
+          <h1>Hello wonderful human! <br></h1>
+          <div class="profile-picture-container">
+            <div class="profile-picture">
+                <img src="images/about.jpg" alt="Profile Picture 1" class="active">
+                <img src="images/lola2.jpg" alt="Profile Picture 2">
+                <img src="images/lola3.jpg" alt="Profile Picture 3">
+                <img src="images/lola4.jpg" alt="Profile Picture 4">
+                <img src="images/lola5.jpg" alt="Profile Picture 5">
+                <img src="images/lola6.jpg" alt="Profile Picture 6">
+                <img src="images/lola7.jpg" alt="Profile Picture 7">
+                <img src="images/lola8.jpg" alt="Profile Picture 8">
+                <img src="images/lola9.jpg" alt="Profile Picture 9">
+                <img src="images/lola10.jpg" alt="Profile Picture 10">
+            </div>
+            <button class="nav-arrow nav-arrow-left" onclick="prevImage()">&#8249;</button>
+            <button class="nav-arrow nav-arrow-right" onclick="nextImage()">&#8250;</button>
+        </div>
+        <p>My name is Lola, and I'm more than these few pictures, just like you!</p>
+        <h2>My mission: Empowering Personal Growth Through Sensitivity and Self-Awareness</h2>
+        <p>Science-backed insights and tools, and mindful strategies for embracing your individuality, cultivating self-confidence, understanding emotions, and living in alignment with yourself<br><br>Let’s make overall well-being a life’s philosophy!</p>
  </div>
  </div>
  </section>
@@ -561,38 +559,35 @@ position: right sticky;
   <div class="container">
  <h2 class="text-center mb-5">What about my story</h2>
  </div>
+ <div class="text-center">
  <div class="container">
  <div class="text-center mb-5">
- <p>To make a long story short, I'm coming from a costal town in France, from a lower-middle social class. My early years were quite traumatizing and left me with post-traumatic stress syndrome (PTSD): low self-esteem, emotional struggles, and a need for approval. Despite this fragile foundation, I went to Paris at the age of 18 to study biology, specifically physiopathology. I went on to get a master's degree, specializing in nutrition and metabolism. My internship was on epigenetics. After that, I found my first job as research engineer in a neurorespiratory lab. I worked there for 3 years, but I wanted to have a broader vision, so I obtained a Master of Science in Biotechnologies and experienced working in a consulting firm, financing research and development projects. </p>
- <p>Over these years and despite my education, I lived completely carelessly, prioritizing socializing and having fun. This part of my life filled me with wonderful memories. At the age of 27, I had never reflected on what I really wanted in life. Living the fast life, partying, drinking and smoking was fun at the time, but unconsciously I knew it wasn't my true nature. I felt empty, I had no vision for myself, something was clearly missing. Still easily influenced, totally emotionally driven and pressured by social expectations, I didn't know who I was. Thinking about my future became extremely stressful. I collapsed internally. My mental state was so bad. A mix of despair, mild depression and identity crisis. This time I knew, I felt deeply that I had to do something for myself.</p>
- <p>I've always been interested in understanding how we work. So I decided to dive deeply into my own identity. Seeking answers and solutions to my condition, I came across the world of positive psychology. Focusing on solutions and positive aspects helped me so much! I started my meditation journey, learned about emotions and mindset, and challenged my beliefs and thoughts, educating myself step after step. My journey has shown me that our internal state profoundly shapes how we perceive and interact with the external world.</p>
- <p>Almost 2 years later, the results are honestly transformative. I feel good, more stable than ever, and at peace with myself. For the first time, I've experienced personal growth, pride in my own accomplishments, and self-confidence. I genuinely want to take you on my journey, that's why I'm creating this account, to do what I can to help and inspire at least some of you.</p>
- </div>
+ <p>Growing up in a coastal town in France, my early years were marked by profound emotional challenges that shaped my understanding of resilience and overall well-being. After losing my mother at a young age and enduring emotional and psychological abuse during my childhood, I eventually lost my father as well.</p>
+ <p>These hardships fueled my passion for health and the human condition, leading me to study in Paris, where I earned two master’s degrees —one in pathophysiology and one biotechnology— and worked in a neuro-respiratory lab for 3 years. However, despite my success, I felt disconnected from my true self. My low self-esteem and deep need for approval led me to living a life shaped by external expectations and social pressures, while neglecting my inner world and sensitivity, which I long perceived as a weakness.</p>
+ <p>In my late twenties, I reached a turning point, struggling with identity and uncertainty about my future. I felt stuck and utterly hopeless. This difficult period sparked a deep desire to understand myself and the world in a more holistic way. I began a personal journey of healing and self-growth, exploring philosophy and positive psychology, and integrating mindfulness and journaling into my life.</p>
+ <p>It's been almost two years now and the results have been amazing. I feel better and more stable than I ever have before. I've finally found peace of mind and a sense of fulfillment. For the first time, I've experienced genuine personal growth, taken pride in my achievements, and developed self-confidence. I'm proud to say that I've learned to love who I am, and I'm grateful for the person I've become.</p>
+ <p>I want to share what I’ve discovered with you. For me it is both: a personal challenge and a passion – a way to express myself and inspire you to discover your own path and purpose in this world.</p>
+ <p>Let’s make well-being a life’s philosophy!</p>
+</div>
  </div>
  <div class="row justify-content-center">
  <div class="text-center">
  <div class="ski-box">
  <div class="ski-header" onclick="toggleContent(this)">
- <span>Learn More</span>
+ <span>Here's a full version of my story</span>
  <span class="ski-icon">&nbsp; + &nbsp;</span>
  </div>
  <div class="ski-content">
- <p>
- <b></b><br>
- Too often we forget that everything is interconnected and struggle to see the bigger picture. <br>For example, did you know that mental health (🧠) is deeply linked to what you eat (🍏) and your lifestyle (🏡) in general? And that your lifestyle is intimately linked to technology (💡) and society (🌍)? Every aspect of our daily lives interacts with each other. For this very reason, we'll try to bridge the gap between scientific discoveries and common knowledge as we travel across various domains:<br>
-🔬 Biology;
-<br>🧠 Psychology;
-<br>🍏 Food;
-<br>🏡 Lifestyle;
-<br>♻️ Sustainability;
-<br>💡 Technology;
-<br>🧘 Spirituality;
-<br>💭 Philosophy;
-<br>🌍 Culture & Society.
-<br><br>I'll try my best to spark your curiosity and give you real informations about holistic well-being, that will allow you to see the bigger picture. Because I'm convinced that having a broad understanding and knowledge of how we function as human beings can be liberating. Consequently, you'll be able to make better decisions to navigate into your life in a thoughtful way. Let's connect the dots together. 
-<br><br>Thanks for joining the adventure towards the meaningful life we're all craving 💚.<br><br>
- </p>
- </div>
+  <p>Growing up in a small coastal town in France, my early years were marked by profound emotional challenges. At just four years old, I lost my mother, an event that left a lasting void in my life. My father, a fisherman, was often away from home, and the person responsible for caring for me during his absence was emotionally abusive. Motivated by jealousy and a cruel lack of love, this individual behaved kindly in front of others—even my father—but revealed their true, hurtful nature when we were alone. From ages 6 to 10, I endured intense emotional and psychological abuse and manipulation. Eventually, the discontent became too much, and I managed to run away at noon, after school. This period of my life is difficult to explain in its complexity.</p>
+  <p>After escaping this situation, I lived with my ailing father, who struggled with his own unresolved traumas, leaving him unable to provide the emotional and educational support I needed. He passed away when I was 14, due to his unhealthy lifestyle. Thankfully, my loving aunt and grandmother stepped in, offering me a semblance of stability despite my withdrawn behavior. Needless to say, these experiences shaped my entire perception of the world through the lens of low self-esteem, emotional outbursts, and a deep need for approval.</p>
+  <p>Though painful, these challenges built my resilience and fueled my passion for Life Sciences, particularly for health. At 18, I moved to Paris to study biology, focusing on physiopathology. Over the years, I earned two master's degrees—one in nutrition and metabolism, and another in biotechnology—and worked in a neuro-respiratory lab. Yet, despite these accomplishments, I struggled to truly appreciate my success, attributing it to luck rather than recognizing my own efforts.</p>
+  <p>In my early twenties, I found myself living a carefree and escapist lifestyle. I focused on socializing, partying, drinking, and smoking. While these years brought many fun memories, I couldn’t shake the feeling that something was out of sync. It felt like I was living a double life, with my outward, shallow actions clashing against my deeper, more introspective sense of self.</p>
+  <p>During these years, I denied my sensitivity, viewing it as a weakness that needed to be hidden. I believed that my strong emotions, gut feelings, and intense experiences made me "not normal," and for a long time, I thought there was something wrong with me. It wasn’t until I hit a low point in 2022, at 27, that I felt utterly lost and overwhelmed by the uncertainty of my future. I had never truly reflected on what I wanted from life, was completely influenced by other people's choices, driven by my emotions, and pressured by societal expectations.</p>
+  <p>Moreover, my initial passion for health began to erode as I became disillusioned with conventional healthcare. I found the traditional approach too reductive, overly focused on diagnosis and medication, while neglecting the broader environmental, emotional, and psychological factors that shape our well-being.</p>
+  <p>The need to realign my life with my core values became urgent—almost vital. I realized I had to take control and accountability for my own life. My personal journey toward embracing my sensitivity, cultivating self-awareness, and seeking calmness began from this place of vulnerability. Drawing from my longstanding curiosity about human behavior and psychology, I immersed myself in positive psychology and evidence-based approaches to well-being. I started meditating and journaling daily, exploring the roles of emotions and mindset, and challenging my own limiting beliefs in pursuit of healing and growth. One step at a time, I educated myself and tried many new things.</p>
+  <p>Now, nearly two years later, the results have been transformative. I feel better and more stable than I ever have before. I have finally found peace of mind and a sense of fulfillment. For the first time, I’ve experienced genuine personal growth, taken pride in my achievements, and developed self-confidence. I’m proud to say that I’ve learned to love who I am, and I’m grateful for the person I’ve become.</p>
+  <p>Of course, this is an ongoing journey, and I continue to approach life with curiosity. Through my own experience, I’ve come to understand that health is not simply a physical concept but one that deeply connects the mind, body, and environment. I’m eager to share what I’ve learned with you. For me, this is both a challenge and a calling—a way to unite my deep, innate need to help others with the challenge of expressing myself and asserting my true self.</p>
+</div>
  </div>
  </div>
  </div>
@@ -607,35 +602,22 @@ position: right sticky;
  <li>
  <h5 class="section-title">Escape your mental jail</h5>
  <div class="content">
- <p><b>What it Means:</b><br> This step speaks to freeing oneself from limiting beliefs, mental blocks, and the negative thought patterns that keep people stuck. It’s all about breaking free from the internal constraints that prevent progress.<br><br>
-  <b>Why It's Important:</b><br> Before anyone can grow or find their true self, they need to clear the mental clutter. This step sets the foundation for everything else.<br><br>
-  <b>Content Ideas:</b>
-  <br>• Explore the science of cognitive distortions and how to overcome them.
-  <br>• Techniques like mindfulness, reframing, and evidence-based strategies for shifting mindset.
-  <br>• Exercises to identify and challenge limiting beliefs.
+ <p><b>What it Means:</b><br>Escaping your mental barrier involves identifying, acknowledging, accepting, and overcoming limiting beliefs, mental blocks, and negative thought patterns that hold you back. It's about freeing yourself from internal constraints that cause self-doubt and prevent growth.<br><br>
+  <b>Why It's Important:</b><br>It's essential because mental barriers can keep you trapped in a cycle of stagnation, preventing you from reaching your full potential. By breaking free, you open yourself up to new possibilities and experiences, allowing for personal growth and transformation.<br>
  </p>
  </div>
  </li>
  <li>
  <h5 class="section-title">Unlock your true nature</h5>
  <div class="content">
-  <p><b>What it Means:</b><br>This is about self-discovery, aligning with one’s core values, and gaining clarity on who they truly are beneath societal expectations or external pressures. It’s the process of peeling back layers to reveal the authentic self.<br><br>
-    <b>Why It's Important:</b><br>Once the mental jail is escaped, people need to reconnect with their true identity to build a life that aligns with who they are at their core.<br><br>
-    <b>Content Ideas:</b>
-    <br>• Self-reflection exercises grounded in psychological theories (e.g., identity development).
-    <br>• Methods for clarifying values and uncovering passions.
-    <br>• Scientific approaches to understanding personality and behavioral tendencies.
-   </p>
+  <p><b>What it Means:</b><br>Unlocking your true nature refers to the process of deep self-discovery and understanding your authentic self—your values, passions, desires, and core identity. It involves peeling back layers of societal expectations, fears, and conditioning to reveal who you truly are.<br><br>
+    <b>Why It's Important:</b><br>Understanding your true nature is vital for living a life that feels meaningful and fulfilling. It allows you to make decisions that align with your authentic self, leading to greater satisfaction, purpose, and well-being. Without this clarity, you may live inauthentically, leading to internal conflict and dissatisfaction.<br>
  </div>
  <li>
-  <h5 class="section-title">Embodie your individuality</h5>
+  <h5 class="section-title">Embody your individuality</h5>
   <div class="content">
-    <p><b>What it Means:</b><br>This step focuses on creating a resilient, empowered version of oneself. It's about taking what you’ve discovered and using it to build confidence, emotional strength, and the ability to navigate life’s challenges.<br><br>
-      <b>Why It's Important:</b><br>Self-discovery is one thing, but applying that understanding to create a stronger, more capable version of oneself is where lasting change happens.<br><br>
-      <b>Content Ideas:</b>
-      <br>• Strategies for building self-discipline and resilience (e.g., habit formation, emotional regulation techniques).
-      <br>• Actionable plans for aligning daily actions with personal values.
-      <br>• Techniques to maintain and grow this newfound strength over time.
+    <p><b>What it Means:</b><br>Embodying your individuality is the process of living authentically in the world, aligning your actions and decisions with your true self. It involves expressing your unique identity while also being savvy about the external world, including its systems, rules, and opportunities.<br><br>
+      <b>Why It's Important:</b><br>It's crucial because it allows you to live a life that is both authentic and effective in the real world. This balance helps you avoid compromising your true self while navigating societal structures. It leads to greater fulfillment, resilience, and the ability to positively impact others.<br>
      </p>
  </div>
  </li>
@@ -646,14 +628,10 @@ position: right sticky;
   <!-- For Who Section -->
   <section id="ForWho" class="ForWho">
     <div class="container">
-    <h2 class="text-center mb-5">For who?</h2>
+    <h2 class="text-center mb-5">Is this for you?</h2>
     <div class="text-center">
     <p class="skill-description">
-   My scientific training in biology and three years of experience working in a research lab have helped me develop a structured and thorough methodology to approach problems. As lead engineer for a COVID project, I'm accustomed to biosafety protocols and working in restrictive and highly regulated environments. Moreover, my time at Leyton gave me a solid understanding of the developmental and innovative challenges industries face before launching products to market.<br><br>
-   I genuinely believe that I maximized the potential of my career break, and I’m convinced it has given me a distinct advantage. For instance, I had been avoiding English for years, despite knowing its value for my career ambitions. Determined to overcome this mental barrier, I made learning English a top priority. I immersed myself in English content and spent over 160 hours with a tutor on the Preply platform. As a result, I am now fluent in English.<br><br>
-   During this time, I also addressed personal unresolved issues and adopted a daily meditation practice. Deep meditation yielded numerous benefits, particularly in enhancing emotional intelligence. By exploring my own emotions, I significantly improved my empathy and my ability to recognize and respond to others' emotional states. Additionally, cultivating self-awareness and adopting a growth mindset have equipped me to manage stress more effectively, sharpen my focus, and approach new experiences and ideas with an open mind.<br><br>
-   Finally, my daily engagement with various AI tools has significantly enhanced my professional toolkit. By leveraging AI for web research, idea refinement, and knowledge expansion, I’ve honed my ability to efficiently process and synthesize vast amounts of information. Additionally, using AI to code my portfolio website has deepened my understanding of human-AI collaboration, improving my technical literacy and adaptability in an increasingly AI-driven workplace.<br><br>
-   Ultimately, these experiences have not only broadened my skill set but also fostered a forward-thinking mindset, and improved my mental clarity and self-confidence, preparing me to embrace new challenges. I am eager to dedicate my work to an impactful project. In today’s fast-changing world, Keeping up and having more than one string in your bow is crucial.
+      My content is crafted for those who crave a deeper understanding of themselves and the world around them, for those seeking scientifically-based personal growth insights. If you're looking for thoughtful, science-based insights into personal growth, sensitivity, and well-being, you’re in the right place. I'd like to offer a path for those who seek more than just surface-level solutions and are ready to embark on a journey of profound self-discovery and holistic development.
    </p>
    <div class="row justify-content-center">
     <div class="text-center">
@@ -667,12 +645,24 @@ position: right sticky;
     </div>
     </div>
     </div>
+    <div class="row justify-content-center">
+      <div class="text-center">
+      <div class="ski-box">
+      <div class="ski-header" onclick="toggleContent(this)">
+      <span>🎁</span>
+      </div>
+      <div class="ski-content">
+      <p>No medical advice here. Only alternative therapeutic practices because ....</p>
+      </div>
+      </div>
+      </div>
     </section>
 
  <!-- Contact Me Section -->
  <section id="contact" class="contact-section">
  <div class="container">
- <h2 class="text-center">Self-confidence | Emotional regulation | Sensitivity | Holistic well-being | Ethical living <br><br>If you'd like to explore these topics in more depth, <br>feel free to follow me on social media</h2>
+    <div class="content">
+ <p class="text-center">I believe well-being begins with awareness.<br><br>Join me on X as I explore the deep connection between<br>mind, body, & environment </p>
  <div class="social-icons">
  <a href="https://x.com/All_Is_Balanced" target="_blank">
  <img src="icons/twitter-x.svg" alt="Icon">
@@ -681,6 +671,7 @@ position: right sticky;
  </div>
  </section>
 
+ 
  <!-- Bootstrap JS and dependencies -->
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
