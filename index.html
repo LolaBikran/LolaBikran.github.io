@@ -290,38 +290,13 @@ position: right sticky;
  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Text shadow for section title */
  color: #40916C; /* Text color for h3 on small screens */
 }
-.approach-box {
- margin: 0 10px;
- padding: 10px;
- background-color: #0E2018; /* Background color for skill box */
- transition: box-shadow 0.3s ease-in-out;
- color: #D8CD37;
- text-align: center;
- font-family: var(--cursive-font);
-}
 
-.approach-header {
- display: flex;
- content: left;
- align-items: center;
- cursor: pointer;
- padding: 15px;
- height: 20px;
- box-sizing: border-box;
- background-color: #0E2018; /* Background color for skill header */
- margin-bottom: 5px;
-}
-
-.approach-header:hover {
- display: flex;
- background-color: #0E2018;
-}
 
 .timeline {
  width: 100%; /* Full width */
  background-color: #1B3F2F; /* Background color */
  color: #faf8f9; /* Text color */
- padding: 30px 20px; /* Padding */
+ padding: 30px 30px; /* Padding */
  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow */
 }
 
@@ -341,11 +316,12 @@ position: right sticky;
 
 .timeline ul li span {
  display: inline-block; /* Inline block display */
- color: #D8CD37;
+ background-color: #D8CD37; /* Background color */
  border-radius: 25px; /* Rounded corners */
  padding: 2px 5px; /* Padding */
- font-size: 2rem; /* Font size */
- text-align:left; /* Center text alignment */
+ font-size: 1.1rem; /* Font size */
+ font-style: italic;
+ text-align: center; /* Center text alignment */
 }
 
 .timeline ul li .content h3 {
@@ -355,7 +331,7 @@ position: right sticky;
 }
 
 .timeline ul li .content p {
- padding: 5px 0px 15px 0px; /* Padding for paragraphs */
+ padding: 5px -10px; /* Padding for paragraphs */
  font-size: 1.2rem; /* Font size for paragraphs */
 }
 
@@ -390,7 +366,21 @@ position: right sticky;
  font-size: 1.2rem; /* Font size for h3 on small screens */
  }
 }
+.article-link {
+ background-color: transparent;
+ color: #0E2018;
+ border: none;
+ padding: 0;
+ font-size: 1rem;
+ font-weight: normal;
+ text-decoration: underline;
+ cursor: pointer;
+ transition: color 0.3s;
+}
 
+.article-link:hover {
+ color: #D8CD37;
+}
 
 /* For Who Section */
 #ForWho {
@@ -449,7 +439,7 @@ position: right sticky;
 
 .skill-description {
  font-size: 1.2rem;
- margin: 10px 10px 100px;
+ margin: 10px 10px 50px;
 }
 
 .ski-content {
@@ -473,9 +463,12 @@ position: right sticky;
     padding: 50px 0;
     color: var(--accent-color);
     text-align: center;
+    font-family: var(--cursive-font);
+    color: #faf8f9;
+    font-size: 1,5rem;
 }
 .contact-image {
-    max-width: 10%;
+    max-width: 50%;
     height: fit-content;
     margin: 10px 0;  /* Adds space above and below the image */
 }
@@ -491,7 +484,6 @@ position: right sticky;
  z-index: 1;
 }
 .contact-section .content {
- font-family: var(--cursive-font); 
  position: relative;
  z-index: 2;
  color: #faf8f9;
@@ -565,7 +557,7 @@ position: right sticky;
             <button class="nav-arrow nav-arrow-right" onclick="nextImage()">&#8250;</button>
         </div>
         <h2>Feeling anxious, hopeless, stuck in your life?<br>You’re not alone. I understand you.</h2>
-        <p>Two years ago, I was in the same place – feeling overwhelmed by life.<br>Ever since, I've been exploring the roots of this problem. It has led me to explore the fascinating relationship between MIND | BODY | ENVIRONMENT </p>
+        <p>Two years ago, I was in the same place – feeling overwhelmed by life.<br>Ever since, I've been exploring the roots of this problem. It has led me to explore the fascinating relationship between MIND — BODY — ENVIRONMENT </p>
         <p>I advocate for a more ethical, thoughtful world. I'd like to be a catalyst for holistic well-being.</p>
  </div>
  </div>
@@ -584,7 +576,7 @@ position: right sticky;
  <p>Alongside my studies, my personal experience and transformation has given me powerful insights of growth and resilience. I know the path isn't always easy, but I’ve walked it, and I’ve come to a place of deep gratitude and foresight. My thinking is both broad and deep, and I’m committed to exploring holistic solutions for well-being, for a better future.</p>
  <br>
  <p>Let’s make well-being a life’s philosophy!</p>
- <br><br>
+ |<br><br>
  <p><i>A lifelong seeker of answers, my journey is one of resilience, curiosity, and a fascination for well-being. I know it’s long, but I think that the context is truly important. Always important.</i></p>
 </div>
  </div>
@@ -615,53 +607,34 @@ position: right sticky;
 
  <!-- Approach Section -->
  <section id="approach" class="approach-section">
- <div class="container">
- <h2 class="text-center mb-5">My approach to overall well-being</h2>
- <div class="timeline">
+  <div class="container">
+  <h2 class="text-center mb-5">My approach to well-being</h2>
+  <div class="timeline">
   <ul>
   <li>
-    <h5 class="section-title">Escape your mental jail</h5>
-    <div class="row justify-content-left"></div>
-     <div class="text-center">
-     <div class="approach-box">
-     <div class="approach-header" onclick="toggleContent(this)">
-     <span>Learn more +</span>
-     </div>
-     <div class="ski-content">
-       <p><b>What it Means:</b><br>Escaping your mental barrier involves identifying, acknowledging, accepting, and overcoming limiting beliefs, mental blocks, and negative thought patterns that hold you back. It's about freeing yourself from internal constraints that cause self-doubt and prevent growth.<br><br>
-         <b>Why It's Important:</b><br>It's essential because mental barriers can keep you trapped in a cycle of stagnation, preventing you from reaching your full potential. By breaking free, you open yourself up to new possibilities and experiences, allowing for personal growth and transformation.<br>
-      </div>
-     </li>
- <li>
- <h5 class="section-title">Unlock your true nature</h5>
- <div class="row justify-content-left"></div>
-  <div class="text-center">
-  <div class="approach-box">
-  <div class="approach-header" onclick="toggleContent(this)">
-  <span>Learn more +</span>
+  <h5 class="section-title">Escape your mental jail</h5>
+  <div class="content">
+  <p>Escaping your mental barrier involves identifying, acknowledging, accepting, and overcoming limiting beliefs, mental blocks, and negative thought patterns that hold you back. It's about freeing yourself from internal constraints that cause self-doubt and prevent growth.<br><br>
+  </p>
   </div>
-  <div class="ski-content">
-    <p><b>What it Means:</b><br>Unlocking your true nature refers to the process of deep self-discovery and understanding your authentic self—your values, passions, desires, and core identity. It involves peeling back layers of societal expectations, fears, and conditioning to reveal who you truly are.<br><br>
-      <b>Why It's Important:</b><br>Understanding your true nature is vital for living a life that feels meaningful and fulfilling. It allows you to make decisions that align with your authentic self, leading to greater satisfaction, purpose, and well-being. Without this clarity, you may live inauthentically, leading to internal conflict and dissatisfaction.<br>
-   </div>
   </li>
- <li>
-  <h5 class="section-title">Embody your individuality</h5>
-  <div class="row justify-content-left"></div>
-  <div class="text-center">
-  <div class="approach-box">
-  <div class="approach-header" onclick="toggleContent(this)">
-  <span>Learn more +</span>
+  <li>
+  <h5 class="section-title">Unlock your true nature</h5>
+  <div class="content">
+   <p>Unlocking your true nature refers to the process of deep self-discovery and understanding your authentic self—your values, passions, desires, and core identity. It involves peeling back layers of societal expectations, fears, and conditioning to reveal who you truly are.<br><br>
+    </p>
   </div>
-  <div class="ski-content">
-    <p><b>What it Means:</b><br>Embodying your individuality is the process of living authentically in the world, aligning your actions and decisions with your true self. It involves expressing your unique identity while also being savvy about the external world, including its systems, rules, and opportunities.<br><br>
-      <b>Why It's Important:</b><br>It's crucial because it allows you to live a life that is both authentic and effective in the real world. This balance helps you avoid compromising your true self while navigating societal structures. It leads to greater fulfillment, resilience, and the ability to positively impact others.<br></p>
- </div>
- </li>
- </ul>
- </div>
- </div>
- </section> 
+  <li>
+   <h5 class="section-title">Embodie your individuality</h5>
+   <div class="content">
+     <p>Embodying your individuality is the process of living authentically in the world, aligning your actions and decisions with your true self. It involves expressing your unique identity while also being savvy about the external world, including its systems, rules, and opportunities.<br><br>
+      </p>
+  </div>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </section> 
   <!-- For Who Section -->
   <section id="ForWho" class="ForWho">
     <div class="container">
@@ -671,7 +644,8 @@ position: right sticky;
     <b>Humans need an update.</b>
     <br><br>In our fast changing world, there is a growing sense of disconnection and isolation. I believe it’s time to bridge old ways of thinking with new. We need a fresh approach to well-being—one that integrates both the wisdom of the past and the innovations of the present.
     <br><br>My vision is to build a community of thoughtful and like-minded individuals who are eager to share ideas, support each other and co-create organic, grounded and sustainable solutions. Together we can create a hub where living more holistically in the future is at the forefront.
-    <br><br>Whether you're just starting out or well on your way, there's a place for you here. Join me on this journey of exploration where we'll dig deep into the fascinating Mind—Body—Environment connection.</p>
+    <br><br>Whether you're just starting out or well on your way, there's a place for you here. Join me on this journey of exploration where we'll dig deep into the fascinating Mind—Body—Environment connection.
+    <br><br>Well-being begins with awareness.</p>
     <div class="row justify-content-center">
       <div class="text-center">
       <div class="ski-box">
@@ -690,14 +664,16 @@ position: right sticky;
  <section id="contact" class="contact-section">
   <div class="container">
       <div class="content">
-          <p class="text-center">I believe well-being begins with awareness.</p>
-          <img src="images/logo89.png" alt="Description of the image" class="contact-image">
+          <p class="text-center">Join me on</p>
           <div class="social-icons">
               <a href="https://x.com/All_Is_Balanced" target="_blank">
                   <img src="icons/twitter-x.svg" alt="Icon">
               </a>
           </div>
+          <img src="images/logo89.png" alt="Description of the image" class="contact-image">
+          <p class="text-center">All is balanced</p>  
       </div>
+    </div>
   </div>
 </section>
 
