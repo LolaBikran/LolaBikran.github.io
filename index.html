@@ -290,7 +290,32 @@ position: right sticky;
  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Text shadow for section title */
  color: #40916C; /* Text color for h3 on small screens */
 }
+.approach-box {
+ margin: 0 10px;
+ padding: 10px;
+ background-color: #0E2018; /* Background color for skill box */
+ transition: box-shadow 0.3s ease-in-out;
+ color: #D8CD37;
+ text-align: center;
+ font-family: var(--cursive-font);
+}
 
+.approach-header {
+ display: flex;
+ content: left;
+ align-items: center;
+ cursor: pointer;
+ padding: 15px;
+ height: 20px;
+ box-sizing: border-box;
+ background-color: #0E2018; /* Background color for skill header */
+ margin-bottom: 5px;
+}
+
+.approach-header:hover {
+ display: flex;
+ background-color: #0E2018;
+}
 
 .timeline {
  width: 100%; /* Full width */
@@ -316,12 +341,11 @@ position: right sticky;
 
 .timeline ul li span {
  display: inline-block; /* Inline block display */
- background-color: #D8CD37; /* Background color */
+ color: #D8CD37;
  border-radius: 25px; /* Rounded corners */
  padding: 2px 5px; /* Padding */
- font-size: 1.1rem; /* Font size */
- font-style: italic;
- text-align: center; /* Center text alignment */
+ font-size: 2rem; /* Font size */
+ text-align:left; /* Center text alignment */
 }
 
 .timeline ul li .content h3 {
@@ -366,21 +390,7 @@ position: right sticky;
  font-size: 1.2rem; /* Font size for h3 on small screens */
  }
 }
-.article-link {
- background-color: transparent;
- color: #0E2018;
- border: none;
- padding: 0;
- font-size: 1rem;
- font-weight: normal;
- text-decoration: underline;
- cursor: pointer;
- transition: color 0.3s;
-}
 
-.article-link:hover {
- color: #D8CD37;
-}
 
 /* For Who Section */
 #ForWho {
@@ -455,13 +465,19 @@ position: right sticky;
 
 /* Contact Section */
 .contact-section {
- position: relative;
- background-image: url('images/background-image.jpg');
- background-size: cover;
- background-position: center;
- padding: 100px 0;
- color: var(--accent-color);
- text-align: center;
+    position: relative;
+    background-image: url('images/background-image2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    color: var(--accent-color);
+    text-align: center;
+}
+.contact-image {
+    max-width: 10%;
+    height: fit-content;
+    margin: 10px 0;  /* Adds space above and below the image */
 }
 
 .contact-section::before {
@@ -475,11 +491,12 @@ position: right sticky;
  z-index: 1;
 }
 .contact-section .content {
+ font-family: var(--cursive-font); 
  position: relative;
  z-index: 2;
  color: #faf8f9;
  font-size: bold;
- font-size: 1.5rem;
+ font-size: 2.5rem;
  text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
 }
 
@@ -490,7 +507,7 @@ position: right sticky;
 }
 
 .contact-section .social-icons img {
- width: 30px; /* Width for social icon images */
+ width: 40px; /* Width for social icon images */
  height: auto; /* Automatic height */
  margin: 0 10px; /* Horizontal margin */
  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
@@ -515,10 +532,10 @@ position: right sticky;
   <a class="nav-link" href="#approach">My approach</a>
   </li>
   <li class="nav-item">
-   <a class="nav-link" href="#ForWho">For who</a>
+   <a class="nav-link" href="#ForWho">My vision</a>
    </li>
   <li class="nav-item">
-  <a class="nav-link" href="#contact">Contact</a>
+  <a class="nav-link" href="#contact">Join me</a>
   </li>
   </ul>
   </div>
@@ -530,7 +547,7 @@ position: right sticky;
   <div class="container">
       <div class="content">
 
-          <h1>Hello wonderful human! <br></h1>
+          <h1>Hello Human,<br> my name is Lola.<br></h1>
           <div class="profile-picture-container">
             <div class="profile-picture">
                 <img src="images/about.jpg" alt="Profile Picture 1" class="active">
@@ -547,9 +564,9 @@ position: right sticky;
             <button class="nav-arrow nav-arrow-left" onclick="prevImage()">&#8249;</button>
             <button class="nav-arrow nav-arrow-right" onclick="nextImage()">&#8250;</button>
         </div>
-        <p>My name is Lola, and I'm more than these few pictures, just like you!</p>
-        <h2>My mission: Empowering Personal Growth Through Sensitivity and Self-Awareness</h2>
-        <p>Science-backed insights and tools, and mindful strategies for embracing your individuality, cultivating self-confidence, understanding emotions, and living in alignment with yourself<br><br>Let’s make overall well-being a life’s philosophy!</p>
+        <h2>Feeling anxious, hopeless, stuck in your life?<br>You’re not alone. I understand you.</h2>
+        <p>Two years ago, I was in the same place – feeling overwhelmed by life.<br>Ever since, I've been exploring the roots of this problem. It has led me to explore the fascinating relationship between MIND | BODY | ENVIRONMENT </p>
+        <p>I advocate for a more ethical, thoughtful world. I'd like to be a catalyst for holistic well-being.</p>
  </div>
  </div>
  </section>
@@ -557,24 +574,25 @@ position: right sticky;
  <!-- About Section -->
  <section id="about-me" class="about-section">
   <div class="container">
- <h2 class="text-center mb-5">What about my story</h2>
+ <h2 class="text-center mb-5">Why trusting me?</h2>
  </div>
  <div class="text-center">
  <div class="container">
  <div class="text-center mb-5">
- <p>Growing up in a coastal town in France, my early years were marked by profound emotional challenges that shaped my understanding of resilience and overall well-being. After losing my mother at a young age and enduring emotional and psychological abuse during my childhood, I eventually lost my father as well.</p>
- <p>These hardships fueled my passion for health and the human condition, leading me to study in Paris, where I earned two master’s degrees —one in pathophysiology and one biotechnology— and worked in a neuro-respiratory lab for 3 years. However, despite my success, I felt disconnected from my true self. My low self-esteem and deep need for approval led me to living a life shaped by external expectations and social pressures, while neglecting my inner world and sensitivity, which I long perceived as a weakness.</p>
- <p>In my late twenties, I reached a turning point, struggling with identity and uncertainty about my future. I felt stuck and utterly hopeless. This difficult period sparked a deep desire to understand myself and the world in a more holistic way. I began a personal journey of healing and self-growth, exploring philosophy and positive psychology, and integrating mindfulness and journaling into my life.</p>
- <p>It's been almost two years now and the results have been amazing. I feel better and more stable than I ever have before. I've finally found peace of mind and a sense of fulfillment. For the first time, I've experienced genuine personal growth, taken pride in my achievements, and developed self-confidence. I'm proud to say that I've learned to love who I am, and I'm grateful for the person I've become.</p>
- <p>I want to share what I’ve discovered with you. For me it is both: a personal challenge and a passion – a way to express myself and inspire you to discover your own path and purpose in this world.</p>
+ <p>I approach the world with a blend of scientific methodology and deep empathy. My background in Life Sciences gives me a solid foundation in understanding human physiology and the complex interplay between the brain and the body. I’m driven by an innate curiosity and a need to find answers to the most pressing questions about well-being.<br></p>
+ <p>But what sets me apart is my highly sensitive nature. I don't shy away from the nuances and subtleties of the human experience. In fact, I don't know how to do it any other way. Sensitivity, often misunderstood as fragility, is my strength—it allows me to perceive connections that others may overlook.</p>
+ <p>Alongside my studies, my personal experience and transformation has given me powerful insights of growth and resilience. I know the path isn't always easy, but I’ve walked it, and I’ve come to a place of deep gratitude and foresight. My thinking is both broad and deep, and I’m committed to exploring holistic solutions for well-being, for a better future.</p>
+ <br>
  <p>Let’s make well-being a life’s philosophy!</p>
+ <br><br>
+ <p><i>A lifelong seeker of answers, my journey is one of resilience, curiosity, and a fascination for well-being. I know it’s long, but I think that the context is truly important. Always important.</i></p>
 </div>
  </div>
  <div class="row justify-content-center">
  <div class="text-center">
  <div class="ski-box">
  <div class="ski-header" onclick="toggleContent(this)">
- <span>Here's a full version of my story</span>
+ <span>Click here to read my story</span>
  <span class="ski-icon">&nbsp; + &nbsp;</span>
  </div>
  <div class="ski-content">
@@ -582,11 +600,13 @@ position: right sticky;
   <p>After escaping this situation, I lived with my ailing father, who struggled with his own unresolved traumas, leaving him unable to provide the emotional and educational support I needed. He passed away when I was 14, due to his unhealthy lifestyle. Thankfully, my loving aunt and grandmother stepped in, offering me a semblance of stability despite my withdrawn behavior. Needless to say, these experiences shaped my entire perception of the world through the lens of low self-esteem, emotional outbursts, and a deep need for approval.</p>
   <p>Though painful, these challenges built my resilience and fueled my passion for Life Sciences, particularly for health. At 18, I moved to Paris to study biology, focusing on physiopathology. Over the years, I earned two master's degrees—one in nutrition and metabolism, and another in biotechnology—and worked in a neuro-respiratory lab. Yet, despite these accomplishments, I struggled to truly appreciate my success, attributing it to luck rather than recognizing my own efforts.</p>
   <p>In my early twenties, I found myself living a carefree and escapist lifestyle. I focused on socializing, partying, drinking, and smoking. While these years brought many fun memories, I couldn’t shake the feeling that something was out of sync. It felt like I was living a double life, with my outward, shallow actions clashing against my deeper, more introspective sense of self.</p>
-  <p>During these years, I denied my sensitivity, viewing it as a weakness that needed to be hidden. I believed that my strong emotions, gut feelings, and intense experiences made me "not normal," and for a long time, I thought there was something wrong with me. It wasn’t until I hit a low point in 2022, at 27, that I felt utterly lost and overwhelmed by the uncertainty of my future. I had never truly reflected on what I wanted from life, was completely influenced by other people's choices, driven by my emotions, and pressured by societal expectations.</p>
+  <p>During these years, I denied my sensitivity, viewing it as a weakness that needed to be hidden. I believed that my strong emotions, gut feelings, and intense experiences made me "not normal," and for a long time, I thought there was something wrong with me. The inner conflict became unbearable. I collapsed internally and hit my lowest point in 2022 at 27. I felt utterly lost and overwhelmed by the uncertainty of my future. I had never truly reflected on what I wanted from life, was completely influenced by other people's choices, driven by my emotions, and pressured by societal expectations.</p>
   <p>Moreover, my initial passion for health began to erode as I became disillusioned with conventional healthcare. I found the traditional approach too reductive, overly focused on diagnosis and medication, while neglecting the broader environmental, emotional, and psychological factors that shape our well-being.</p>
-  <p>The need to realign my life with my core values became urgent—almost vital. I realized I had to take control and accountability for my own life. My personal journey toward embracing my sensitivity, cultivating self-awareness, and seeking calmness began from this place of vulnerability. Drawing from my longstanding curiosity about human behavior and psychology, I immersed myself in positive psychology and evidence-based approaches to well-being. I started meditating and journaling daily, exploring the roles of emotions and mindset, and challenging my own limiting beliefs in pursuit of healing and growth. One step at a time, I educated myself and tried many new things.</p>
-  <p>Now, nearly two years later, the results have been transformative. I feel better and more stable than I ever have before. I have finally found peace of mind and a sense of fulfillment. For the first time, I’ve experienced genuine personal growth, taken pride in my achievements, and developed self-confidence. I’m proud to say that I’ve learned to love who I am, and I’m grateful for the person I’ve become.</p>
-  <p>Of course, this is an ongoing journey, and I continue to approach life with curiosity. Through my own experience, I’ve come to understand that health is not simply a physical concept but one that deeply connects the mind, body, and environment. I’m eager to share what I’ve learned with you. For me, this is both a challenge and a calling—a way to unite my deep, innate need to help others with the challenge of expressing myself and asserting my true self.</p>
+  <p>The need to realign my life with my core values became urgent—almost vital. I realized I had to take control and accountability for my own life. Through these challenges, a powerful curiosity began to emerge, pushing me to seek deeper answers. This feeling of disconnection led me to start investigating well-being on my own, beyond just physical health. It was the beginning of my personal journey.</p>
+  <p>I started meditating and journaling daily, exploring the roles of emotions and mindset, and challenging my own limiting beliefs in pursuit of healing and growth. I’ve committed myself to extensive research and personal experimentation. I’ve been exploring these concepts in my own life, testing what works and what doesn’t, driven by a desire to uncover holistic solutions that are rooted in both personal experience and scientific understanding. Through this journey, I’ve learned that embodying my true nature and individuality has given my life meaning and fulfillment, and it’s this knowledge that I want to share with you.</p>
+  <p>Two years later, the results have been transformative. I feel better and more stable than I ever have before. I have finally found peace of mind and a sense of fulfillment. For the first time, I’ve experienced genuine personal growth, taken pride in my achievements, and developed self-confidence. I’m proud to say that I’ve learned to love who I am, and I’m grateful for the person I’ve become.</p>
+  <p>Of course, this is an ongoing journey but what I’ve learned ever since is that empowering my true nature and gaining understanding of the external world has given my life an entirely different perspective, more choices and a vision for the future.</p>
+  <p>Now, I want to share what I’ve learned. I’m very empathetic and I desire to help others grow. Above all, I believe in the importance of human connection, and I’d like seeing us thriving in this fast-changing world. I believe it’s time, if not urgent, to bridge old ways of thinking with new. We need to refresh our approaches to well-being.</p>
 </div>
  </div>
  </div>
@@ -596,29 +616,46 @@ position: right sticky;
  <!-- Approach Section -->
  <section id="approach" class="approach-section">
  <div class="container">
- <h2 class="text-center mb-5">My approach</h2>
+ <h2 class="text-center mb-5">My approach to overall well-being</h2>
  <div class="timeline">
- <ul>
- <li>
- <h5 class="section-title">Escape your mental jail</h5>
- <div class="content">
- <p><b>What it Means:</b><br>Escaping your mental barrier involves identifying, acknowledging, accepting, and overcoming limiting beliefs, mental blocks, and negative thought patterns that hold you back. It's about freeing yourself from internal constraints that cause self-doubt and prevent growth.<br><br>
-  <b>Why It's Important:</b><br>It's essential because mental barriers can keep you trapped in a cycle of stagnation, preventing you from reaching your full potential. By breaking free, you open yourself up to new possibilities and experiences, allowing for personal growth and transformation.<br>
- </p>
- </div>
- </li>
+  <ul>
+  <li>
+    <h5 class="section-title">Escape your mental jail</h5>
+    <div class="row justify-content-left"></div>
+     <div class="text-center">
+     <div class="approach-box">
+     <div class="approach-header" onclick="toggleContent(this)">
+     <span>Learn more +</span>
+     </div>
+     <div class="ski-content">
+       <p><b>What it Means:</b><br>Escaping your mental barrier involves identifying, acknowledging, accepting, and overcoming limiting beliefs, mental blocks, and negative thought patterns that hold you back. It's about freeing yourself from internal constraints that cause self-doubt and prevent growth.<br><br>
+         <b>Why It's Important:</b><br>It's essential because mental barriers can keep you trapped in a cycle of stagnation, preventing you from reaching your full potential. By breaking free, you open yourself up to new possibilities and experiences, allowing for personal growth and transformation.<br>
+      </div>
+     </li>
  <li>
  <h5 class="section-title">Unlock your true nature</h5>
- <div class="content">
-  <p><b>What it Means:</b><br>Unlocking your true nature refers to the process of deep self-discovery and understanding your authentic self—your values, passions, desires, and core identity. It involves peeling back layers of societal expectations, fears, and conditioning to reveal who you truly are.<br><br>
-    <b>Why It's Important:</b><br>Understanding your true nature is vital for living a life that feels meaningful and fulfilling. It allows you to make decisions that align with your authentic self, leading to greater satisfaction, purpose, and well-being. Without this clarity, you may live inauthentically, leading to internal conflict and dissatisfaction.<br>
- </div>
+ <div class="row justify-content-left"></div>
+  <div class="text-center">
+  <div class="approach-box">
+  <div class="approach-header" onclick="toggleContent(this)">
+  <span>Learn more +</span>
+  </div>
+  <div class="ski-content">
+    <p><b>What it Means:</b><br>Unlocking your true nature refers to the process of deep self-discovery and understanding your authentic self—your values, passions, desires, and core identity. It involves peeling back layers of societal expectations, fears, and conditioning to reveal who you truly are.<br><br>
+      <b>Why It's Important:</b><br>Understanding your true nature is vital for living a life that feels meaningful and fulfilling. It allows you to make decisions that align with your authentic self, leading to greater satisfaction, purpose, and well-being. Without this clarity, you may live inauthentically, leading to internal conflict and dissatisfaction.<br>
+   </div>
+  </li>
  <li>
   <h5 class="section-title">Embody your individuality</h5>
-  <div class="content">
+  <div class="row justify-content-left"></div>
+  <div class="text-center">
+  <div class="approach-box">
+  <div class="approach-header" onclick="toggleContent(this)">
+  <span>Learn more +</span>
+  </div>
+  <div class="ski-content">
     <p><b>What it Means:</b><br>Embodying your individuality is the process of living authentically in the world, aligning your actions and decisions with your true self. It involves expressing your unique identity while also being savvy about the external world, including its systems, rules, and opportunities.<br><br>
-      <b>Why It's Important:</b><br>It's crucial because it allows you to live a life that is both authentic and effective in the real world. This balance helps you avoid compromising your true self while navigating societal structures. It leads to greater fulfillment, resilience, and the ability to positively impact others.<br>
-     </p>
+      <b>Why It's Important:</b><br>It's crucial because it allows you to live a life that is both authentic and effective in the real world. This balance helps you avoid compromising your true self while navigating societal structures. It leads to greater fulfillment, resilience, and the ability to positively impact others.<br></p>
  </div>
  </li>
  </ul>
@@ -628,23 +665,13 @@ position: right sticky;
   <!-- For Who Section -->
   <section id="ForWho" class="ForWho">
     <div class="container">
-    <h2 class="text-center mb-5">Is this for you?</h2>
+    <h2 class="text-center mb-5">My vision</h2>
     <div class="text-center">
     <p class="skill-description">
-      My content is crafted for those who crave a deeper understanding of themselves and the world around them, for those seeking scientifically-based personal growth insights. If you're looking for thoughtful, science-based insights into personal growth, sensitivity, and well-being, you’re in the right place. I'd like to offer a path for those who seek more than just surface-level solutions and are ready to embark on a journey of profound self-discovery and holistic development.
-   </p>
-   <div class="row justify-content-center">
-    <div class="text-center">
-    <div class="ski-box">
-    <div class="ski-header" onclick="toggleContent(this)">
-    <span>Caution</span>
-    <span class="ski-icon">+</span>
-    </div>
-    <div class="ski-content">
-    <p>No medical advice here. Only alternative therapeutic practices because ....</p>
-    </div>
-    </div>
-    </div>
+    <b>Humans need an update.</b>
+    <br><br>In our fast changing world, there is a growing sense of disconnection and isolation. I believe it’s time to bridge old ways of thinking with new. We need a fresh approach to well-being—one that integrates both the wisdom of the past and the innovations of the present.
+    <br><br>My vision is to build a community of thoughtful and like-minded individuals who are eager to share ideas, support each other and co-create organic, grounded and sustainable solutions. Together we can create a hub where living more holistically in the future is at the forefront.
+    <br><br>Whether you're just starting out or well on your way, there's a place for you here. Join me on this journey of exploration where we'll dig deep into the fascinating Mind—Body—Environment connection.</p>
     <div class="row justify-content-center">
       <div class="text-center">
       <div class="ski-box">
@@ -652,24 +679,27 @@ position: right sticky;
       <span>🎁</span>
       </div>
       <div class="ski-content">
-      <p>No medical advice here. Only alternative therapeutic practices because ....</p>
-      </div>
+      <p>There is a comfortable and true place for you in this world. The many distractions are misleading, but you’ll find it with patience and dedication. Take care of yourself, take care of your life. Make it a priority.</p>
+      <p>And if you think nobody cares, you’re wrong: I do care. I know what it is to be human, we are complex, we are sensitive and we deserve gentleness and time to grow. That’s the undeniable truth.</p>
+     </div>
       </div>
       </div>
     </section>
 
  <!-- Contact Me Section -->
  <section id="contact" class="contact-section">
- <div class="container">
-    <div class="content">
- <p class="text-center">I believe well-being begins with awareness.<br><br>Join me on X as I explore the deep connection between<br>mind, body, & environment </p>
- <div class="social-icons">
- <a href="https://x.com/All_Is_Balanced" target="_blank">
- <img src="icons/twitter-x.svg" alt="Icon">
- </a>
- </div>
- </div>
- </section>
+  <div class="container">
+      <div class="content">
+          <p class="text-center">I believe well-being begins with awareness.</p>
+          <img src="images/logo89.png" alt="Description of the image" class="contact-image">
+          <div class="social-icons">
+              <a href="https://x.com/All_Is_Balanced" target="_blank">
+                  <img src="icons/twitter-x.svg" alt="Icon">
+              </a>
+          </div>
+      </div>
+  </div>
+</section>
 
  
  <!-- Bootstrap JS and dependencies -->
