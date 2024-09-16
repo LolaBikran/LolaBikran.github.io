@@ -299,13 +299,15 @@ position: right sticky;
  font-family: "Roboto Condensed", sans-serif;
  text-align: left;
  font-size: 1.2rem;
+ overflow: hidden;
+ display: none; 
 }
 
-.timeline ul {
+
+  .timeline ul {
  list-style-type: none; /* No list style */
  border-left: 2px solid #D8CD37; /* Left border */
  padding: 10px 5px; /* Padding */
- 
 }
 
 .timeline ul li {
@@ -316,7 +318,7 @@ position: right sticky;
 }
 
 .timeline ul li span {
- display: inline-block; /* Inline block display */
+ display: none; /* Inline block display */
  background-color: #D8CD37; /* Background color */
  border-radius: 25px; /* Rounded corners */
  padding: 2px 5px; /* Padding */
@@ -336,6 +338,7 @@ position: right sticky;
  font-size: 1.2rem; /* Font size for paragraphs */
  font-family: "Roboto Condensed", sans-serif;
 }
+
 
 .timeline ul li:before {
  position: absolute; /* Absolute positioning */
@@ -612,7 +615,7 @@ position: right sticky;
   <div class="text-center">
   <div class="ski-box">
   <div class="ski-header" onclick="toggleContent(this)">
-  <span>👉 Click here to read my story 👈</span>
+  <span>👉 Read my story 👈</span>
   </div>
   <div class="timeline">
   <ul>
@@ -658,6 +661,7 @@ position: right sticky;
    </div>
    </li>
   </ul>
+  </div>
   </div>
   </div>
   </section> 
@@ -780,6 +784,7 @@ document.addEventListener('DOMContentLoaded', function() {
  const links = document.querySelectorAll('a.nav-link');
  links.forEach(link => link.addEventListener('click', customSmoothScroll));
 });
+
 
  </script>
  
