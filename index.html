@@ -221,8 +221,7 @@ position: right sticky;
 }
 
 #about-me .ski-header {
- display: flex;
- justify-content: space-between;
+ display: center;
  align-items: center;
  gap: 10px;
  cursor: pointer;
@@ -286,7 +285,6 @@ position: right sticky;
  font-size: 2.8rem;
  margin-bottom: 10px; /* Bottom margin for h2 */
  font-family: var(--cursive-font);
- font-weight: bold;
  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Text shadow for section title */
  color: #40916C; /* Text color for h3 on small screens */
 }
@@ -298,6 +296,9 @@ position: right sticky;
  color: #faf8f9; /* Text color */
  padding: 30px 30px; /* Padding */
  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow */
+ font-family: "Roboto Condensed", sans-serif;
+ text-align: left;
+ font-size: 1.2rem;
 }
 
 .timeline ul {
@@ -333,6 +334,7 @@ position: right sticky;
 .timeline ul li .content p {
  padding: 5px -10px; /* Padding for paragraphs */
  font-size: 1.2rem; /* Font size for paragraphs */
+ font-family: "Roboto Condensed", sans-serif;
 }
 
 .timeline ul li:before {
@@ -570,9 +572,9 @@ position: right sticky;
     <div class="text-center">
     <p class="skill-description">
     <b>And I’m much more than just these few pictures—just like you!</b>
-    <br><br>The world is changing fast, and we are faced with both unprecedented challenges and <i>incredible opportunities</i>. 
     <br><br>My mission with my social media is to offer a new perspective to our struggles and fill the gap between where we are now—overwhelmed, disconnected, and anxious—and where we can go: a place of transformation, growth, and thriving. 
-    <p>My content revolves around a central question: <i><b><br>How does the overwhelming modern world hinder our ability to heal, grow, and transform?</b></i></p>
+    <p>I approach the world with a blend of scientific methodology and deep empathy. My background in physiology and my personal experience with deep meditation give me a solid foundation in understanding the complex interplay between mind, body and environment. Sensitivity, often misunderstood as fragility, is my strength—it allows me to perceive connections that others may overlook.<br></p>
+    <p><br> I’m driven by an innate curiosity and a need to find answers to the most pressing questions about well-being.<br><br>My content revolves around a central question: <i><b><br>How does the overwhelming modern world hinder our ability to heal, grow, and transform?</b></i></p>
     <br>I’ve created this space to be a catalyst for deep transformation, where we can zoom out, explore the bigger picture, and reframe how we see ourselves and our world. 
     <br><br> By engaging in thoughtful conversations and sharing science-backed insights, I aim to inspire people to embrace their individuality, foster meaningful connections, and work toward a more ethical, harmonious future.
 
@@ -594,7 +596,6 @@ position: right sticky;
       </div>
     </section>
 
-
  <!-- Approach Section -->
  <section id="approach" class="approach-section">
   <div class="container">
@@ -607,6 +608,12 @@ position: right sticky;
   </div>
   </div>
  </div>
+ <div class="row justify-content-center">
+  <div class="text-center">
+  <div class="ski-box">
+  <div class="ski-header" onclick="toggleContent(this)">
+  <span>👉 Click here to read my story 👈</span>
+  </div>
   <div class="timeline">
   <ul>
   <li>
@@ -665,13 +672,13 @@ position: right sticky;
     <br><br>But what if our anxiety, our sense of being utterly lost, isn’t a flaw? What if these feelings are natural responses to a world in collective denial?
     <br><br>We’ve become so focused on individual survival that we’re missing the bigger picture—the societal and environmental shifts happening all around us. The rise in mental health issues, public health crises, and societal unrest are symptoms of this larger collective issue. Our survival mode has kicked in, but we’re not meant to live in constant fight-or-flight.
     <br><br>Our system is not set up to nurture our well-being. Instead, it treats our anxiety and confusion as individual faults to be fixed rather than as signs of deeper, systemic problems. This creates a disconnect between the life we live and the life we could live. Many of us are waking up to this realization, but the path forward can seem daunting.</p>
-    <br><br>Here’s where <b>zooming out</b> becomes essential.</p>
+    <br>Here’s where <b>zooming out</b> becomes essential.</p>
     <br><br>We need to step back from the day-to-day noise and look at the broader picture. We are at a unique moment in history, facing not just individual challenges but global ones. The world we once knew, where purpose was shaped by things like rebuilding after wars or serving our countries, has shifted. We are now faced with global, interconnected problems: environmental crises, the fragmentation of social bonds, and an economic system that no longer resonates with our values.  </p>
     <br><br>Yet, this moment of confusion is also our <b>greatest opportunity for transformation</b>.</p>
     <br><br>When we zoom out, we see that the world is shifting toward a more holistic, global consciousness. We are no longer isolated in our struggles; we are all deeply connected. This awareness opens up a chance to <b>reclaim our well-being</b> and redefine how we live and interact with each other and the planet. It’s time to stop seeing our feelings of anxiety and overwhelm as personal failures and start seeing them as signals for change.</p>
-    <br><br>My vision is to help people realize that transformation is not just possible—it’s necessary. By understanding the link between the collective denial we’re experiencing and the public health issues that are rising, we can begin to heal, both individually and as a society. We must acknowledge that our current system isn’t built to support holistic well-being and that it's time to build a new, more ethical way of living—one that honors our humanity and the natural world.</p>
-    <br><br>I believe that by reclaiming our well-being and re-establishing authentic social bonds, we can create a future rooted in compassion, self-awareness, and ethical action. This isn’t about fixing ourselves or finding quick solutions to our struggles. It’s about <b>opening a new door</b> to a life that aligns with who we truly are and what the world truly needs.</p>
-    <br><br>We are in a unique position to use technology as a tool for reconnection, to reimagine our relationship with the earth, and to create communities that support one another in meaningful ways. Together, we can break free from the survival mode that has kept us stuck, and begin to live in a way that nurtures both individual and collective well-being. </p>
+    <br>My vision is to help people realize that transformation is not just possible—it’s necessary. By understanding the link between the collective denial we’re experiencing and the public health issues that are rising, we can begin to heal, both individually and as a society. We must acknowledge that our current system isn’t built to support holistic well-being and that it's time to build a new, more ethical way of living—one that honors our humanity and the natural world.</p>
+    <br>I believe that by reclaiming our well-being and re-establishing authentic social bonds, we can create a future rooted in compassion, self-awareness, and ethical action. This isn’t about fixing ourselves or finding quick solutions to our struggles. It’s about <b>opening a new door</b> to a life that aligns with who we truly are and what the world truly needs.</p>
+    <br>We are in a unique position to use technology as a tool for reconnection, to reimagine our relationship with the earth, and to create communities that support one another in meaningful ways. Together, we can break free from the survival mode that has kept us stuck, and begin to live in a way that nurtures both individual and collective well-being. </p>
     <br><br>Let’s step into this new world, where transformation is not just a dream—<b>it’s our path forward.</b></p>
     </section>
 
